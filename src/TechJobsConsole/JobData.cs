@@ -2,6 +2,8 @@
 using System.IO;
 using System.Reflection;
 using System.Text;
+using System;
+
 
 namespace TechJobsConsole
 {
@@ -53,6 +55,7 @@ namespace TechJobsConsole
                     {
                         jobs.Add(row);
                     }
+                    
                 }
 
                 
@@ -70,6 +73,7 @@ namespace TechJobsConsole
             value = value.ToLower();
             List<Dictionary<string, string>> jobs = new List<Dictionary<string, string>>();
 
+
             foreach (Dictionary<string, string> row in AllJobs)
             {
                 string aValue = row[column];
@@ -85,6 +89,7 @@ namespace TechJobsConsole
             }
 
             return jobs;
+            
         }
 
         /*
